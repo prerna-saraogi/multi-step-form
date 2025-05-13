@@ -12,7 +12,7 @@ const Review = () => {
             <h2>Review & Submit</h2>
             <pre>{JSON.stringify(formData, null, 2)}</pre>
             <div className="button-group">
-                <button onClick={prevStep}>Back</button>
+                <button className="back-btn" onClick={prevStep}>Go Back</button>
                 <button onClick={handleSubmit}>Submit</button>
             </div>
         </div>
