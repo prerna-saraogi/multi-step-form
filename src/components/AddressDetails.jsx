@@ -16,10 +16,10 @@ const AddressDetails = () => {
 
     function handleNext() {
         const newErrors = {};
-        if (!formData.address.trim()) newErrors.address = "Address is required.";
-        if (!formData.city.trim()) newErrors.city = "City is required.";
-        if (!formData.state) newErrors.state = "State is required.";
-        if (!/^\d{6}$/.test(formData.postalCode)) newErrors.postalCode = "Enter valid 6-digit postal code.";
+        if (!formData.address.trim()) newErrors.address = "Address is required";
+        if (!formData.city.trim()) newErrors.city = "City is required";
+        if (!formData.state) newErrors.state = "State is required";
+        if (!/^\d{6}$/.test(formData.postalCode)) newErrors.postalCode = "Enter valid 6-digit postal code";
 
         setErrors(newErrors);
         if (Object.keys(newErrors).length === 0) nextStep();
@@ -54,7 +54,6 @@ const AddressDetails = () => {
             <div className="form-group">
                 <label htmlFor="state">State</label>
                 <select
-                    placeholder="Choose your state"
                     value={formData.state}
                     onChange={(e) => updateFormData({ state: e.target.value })}
                 >

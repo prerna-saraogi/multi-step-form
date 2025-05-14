@@ -16,8 +16,17 @@ export const FormProvider = ({ children }) => {
     const updateFormData = (newData) => {
         setFormData((prev) => ({ ...prev, ...newData }))
     }
+
+    const resetForm = () => {
+        setFormData({
+            name: "", email: "", phone: "",
+            address: "", city: "", state: "", postalCode: "",
+            cardNumber: "", expiryMonth: "", expiryYear: "", cvv: "",
+        })
+        setStep(1);
+    }
     return (
-        <FormContext.Provider value={{ step, nextStep, prevStep, formData, updateFormData }}>
+        <FormContext.Provider value={{ step, nextStep, prevStep, formData, updateFormData, resetForm }}>
             {children}
         </FormContext.Provider>
     )

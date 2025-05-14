@@ -11,9 +11,9 @@ const PaymentInfo = () => {
 
     const handleNext = () => {
         const newErrors = {};
-        if (!/^\d{16}$/.test(formData.cardNumber)) newErrors.cardNumber = "Card number must be 16 digits.";
-        if (!formData.expiryMonth || !formData.expiryYear) newErrors.expiry = "Select month and year.";
-        if (!/^\d{3}$/.test(formData.cvv)) newErrors.cvv = "CVV must be 3 digits.";
+        if (!/^\d{16}$/.test(formData.cardNumber)) newErrors.cardNumber = "Card number must be 16 digits";
+        if (!formData.expiryMonth || !formData.expiryYear) newErrors.expiry = "Select month and year";
+        if (!/^\d{3}$/.test(formData.cvv)) newErrors.cvv = "CVV must be 3 digits";
 
         setErrors(newErrors);
         if (Object.keys(newErrors).length === 0) nextStep();

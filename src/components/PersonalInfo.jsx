@@ -7,9 +7,9 @@ const PersonalInfo = () => {
 
     const handleNext = () => {
         const newErrors = {};
-        if (!formData.name.trim()) newErrors.name = "Name is required.";
-        if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Invalid email format.";
-        if (!/^[6-9]\d{9}$/.test(formData.phone)) newErrors.phone = "Enter valid 10-digit phone number.";
+        if (!formData.name.trim()) newErrors.name = "Name is required";
+        if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Invalid email format";
+        if (!/^[6-9]\d{9}$/.test(formData.phone)) newErrors.phone = "Enter valid 10-digit phone number";
 
         setErrors(newErrors);
         if (Object.keys(newErrors).length === 0) nextStep();
