@@ -2,7 +2,7 @@ import { useForm } from '../context/FormContext';
 import db from '../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useState } from 'react';
-
+import Success from './Success';
 
 const Review = () => {
     const { formData, prevStep, resetForm } = useForm();
@@ -88,13 +88,7 @@ const Review = () => {
 
             ) : (
                 <>
-                    <h2>🎉 Form Submitted Successfully!</h2>
-                    <p className="success">Thank you! Your details have been saved.</p>
-                    <div className="button-group">
-                        <button className="next-btn" onClick={handleNewForm}>
-                            New Form <span className="arrow">&#8594;</span>
-                        </button>
-                    </div>
+                    <Success onReset={handleNewForm} />
                 </>
             )}
         </div>
