@@ -7,12 +7,13 @@ body {
   background: #e5e5e5;
   font-family: "Inter", Arial, sans-serif;
   color: #000000;
+  padding: 1rem;
 }
 
 .form-step {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 1.75rem;
   margin: auto;
   padding: 2rem;
   height: auto;
@@ -24,7 +25,7 @@ body {
 }
 .form-step h2 {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 34px;
 }
 
@@ -36,7 +37,7 @@ body {
 .form-group label {
   margin-bottom: 0.5rem;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 19px;
 }
 
@@ -46,7 +47,7 @@ select {
   border: 1px solid #e7e7e7;
   border-radius: 12px;
   font-size: 1rem;
-  padding: 12px;
+  padding: 0.75rem;
   transition: border-color 0.2s ease;
   display: flex;
   flex-direction: row;
@@ -65,7 +66,7 @@ textarea::placeholder {
   font-family: inherit;
 }
 
-.form-group input:focus,
+input:focus,
 select:focus,
 textarea:focus {
   border-color: #068d6d;
@@ -88,8 +89,8 @@ select option[value=""] {
 .button-group {
   display: flex;
   justify-content: flex-end;
-  gap: 28px;
-  margin-top: 32px;
+  gap: 1.75rem;
+  margin-top: 2rem;
 }
 button {
   text-transform: uppercase;
@@ -117,7 +118,8 @@ button.next-btn {
   justify-content: flex-start;
 }
 button.submit {
-  width: 150px;
+  width: 100%;
+  max-width: 150px;
 }
 
 button.next-btn:hover,
@@ -171,6 +173,7 @@ button.back-btn:hover {
     gap: 16px;
     margin-top: 20px;
   }
+
   button.next-btn,
   button.submit {
     width: 100%;
